@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Desafio entregable 7</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Ingrese Producto</h1>
+            <br>
+        </div>
+        <form id="formAgregarProducto">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="name" id="nombre" required>
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="text" name="price" id="precio" required>
+            </div>
+            <button>Enviar</button>
+        </form>
+        <br>
+        <div>
+            <h2>Lista de productos</h2>
+            <div id="productos"></div>
+        </div>
+    </div>
+    <div>
+        <h1>Centro de Mensajes</h1>
+        <br>
+        <input type="text" id="inputUsername" placeholder="Ingrese su email">
+        <hr>
+        <div id="mensajes"></div>
+        <form id="formPublicarMensaje" autocomplete="off">
+            <div>
+                <input type="text" disabled id="inputMensaje" placeholder="Ingrese su mensaje">
+                <button disabled id="btnEnviar" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
